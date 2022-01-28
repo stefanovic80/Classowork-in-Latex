@@ -1,3 +1,5 @@
+%https://tex.stackexchange.com/questions/37581/latex-figures-side-by-side
+% put a double figure side by side
 
 %\documentclass[12pt]{report}
 %\documentclass[12pt]{extreport}
@@ -10,6 +12,7 @@
 \usepackage{IEEEtrantools}
 \usepackage{cancel}
 \usepackage[font=small,labelfont=bf]{caption}
+\usepackage{subcaption}
 \usepackage{enumitem}
 
 \usepackage{verbatim}
@@ -56,7 +59,7 @@
 \begin{enumerate}
 
 	%Pag 117 n 19
-	\item Il sistema di carrucole mostrato nella figura \ref{fig:carrucole}a viene usato per sollevare una cassa di 52 kg. Osserva che una catena collega la carrucola superiore al soffitto e una seconda catena collega la carrucola inferiore alla cassa. Assumendo che le masse delle catene, delle carrucole e delle corde siaqno trascurabili, determina: 
+	\item Il sistema di carrucole mostrato nella figura \ref{fig:carrucole} viene usato per sollevare una cassa di 52 kg. Osserva che una catena collega la carrucola superiore al soffitto e una seconda catena collega la carrucola inferiore alla cassa. Assumendo che le masse delle catene, delle carrucole e delle corde siaqno trascurabili, determina: 
 		\begin{enumerate}
 			\item la forza di richiamo $\vec{F}$ richiesta per sollevare la cassa con velocità costante;
 			\item la tensione nella catena superiore;
@@ -64,7 +67,7 @@
 		\end{enumerate}
 		
 	%Pag 117 n 21
-	\item Due blocchi sono collegati per mezzo di una corda, come in figura \ref{fig:carrucole}b. Il blocco che si trova sulla superficie inclinata di $30$ gradi ha una massa di $3,3$ $kg$, quello che si trova sulla superficie inclinata di $45$ gradi ha una massa di $2,6$ $kg$. Determina il modulo e il vertso dell'accelerazione dei due blocchi.
+	\item Due blocchi sono collegati per mezzo di una corda, come in figura \ref{fig:pianoInclinato}. Il blocco che si trova sulla superficie inclinata di $30$ gradi ha una massa di $3,3$ $kg$, quello che si trova sulla superficie inclinata di $45$ gradi ha una massa di $2,6$ $kg$. Determina il modulo e il vertso dell'accelerazione dei due blocchi.
 	
 	%Pag 117 n 25
 	\item Carlo trascina una cassa di $45$ $kg$ su un pavimento orizzontale mediante una corda inclinata di $42$ gradi. La forza con cui Carlo trascina la cassa è di $142$ $N$. 
@@ -75,20 +78,26 @@
 	\end{enumerate}
 \end{enumerate}
 
-\begin{figure}[h!]		
-	\centering
-   	\includegraphics[width=1.8in]{pictures/problemaCarrucole.png}
-   	\includegraphics[width=3.8in]{pictures/problemaPianoInclinato.jpg}
-  	\caption{a) Sistema di carrucole b) Piano inclinato}
-   	\label{fig:carrucole}
+
+
+
+\begin{figure}[b!]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.8in]{pictures/problemaCarrucole.png}
+  \caption{Sistema di carrucole}
+  \label{fig:carrucole}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=3.8in]{pictures/problemaPianoInclinato.jpg}
+  \caption{Piano inclinato}
+  \label{fig:pianoInclinato}
+\end{subfigure}
+%\caption{A figure with two subfigures}
+\label{fig:test}
 \end{figure}
 
-
-%\begin{figure}[h!]		
-%	\centering
-%   	\includegraphics[width=1.8in]{pictures/problemaPianoInclinato.jpg}
-%  	\caption{Piano inclinato}
-%   	\label{fig:pianoInclinato}
-%\end{figure}
 
 \end{document}
